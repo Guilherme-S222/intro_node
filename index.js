@@ -10,5 +10,9 @@ const porta = 3333;
 
 app.listen (porta, () => {
     //console.log('Env: ' + process.env.PORT); // outro jeito de gerar log de funcionamento do servidor;
-    console.log('Servidor iniciado na porta:' + porta);
+    console.log('Servidor iniciado na porta:' + porta);    
+});
+
+app.get('/', (request, response) => {
+    response.send('Hello World')
 });
